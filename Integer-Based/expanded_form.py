@@ -23,11 +23,12 @@ def expanded_form(num):
 			num_zeros= len(string_num)- idx
 			for _ in itertools.repeat(None, num_zeros):
 				digit+="0"
-			if idx< len(string_num):
+			if idx<len(string_num):
 				expanded+= digit+" + "
-			else: 
-				expanded+= digit
 		else:
 			continue
+	if string_num[-1]=='0':
+		expanded= expanded[:-3]
+
 	return expanded
 
