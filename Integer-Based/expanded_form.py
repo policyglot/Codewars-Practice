@@ -19,7 +19,7 @@ def expanded_form(num):
 	for idx, digit in enumerate(string_num, 1):
 		# The second argument is to ensure that indexing starts from 1 instead of 0
 		# Taking advice from here on keeping indices while looping: https://stackoverflow.com/questions/522563/accessing-the-index-in-python-for-loops
-		if not digit="0":
+		if not digit=="0":
 			num_zeros= len(string_num)- idx
 			for _ in itertools.repeat(None, num_zeros):
 				digit+="0"
