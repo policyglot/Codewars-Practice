@@ -25,6 +25,8 @@ def expanded_form(num):
 				digit+="0"
 			if idx<len(string_num):
 				expanded+= digit+" + "
+			else:
+				expanded+=digit
 		else:
 			continue
 	if string_num[-1]=='0':
