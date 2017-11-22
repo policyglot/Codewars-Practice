@@ -6,6 +6,8 @@ expanded_form(12) # Should return '10 + 2'
 expanded_form(42) # Should return '40 + 2'
 expanded_form(70304) # Should return '70000 + 300 + 4'"""
 
+import itertools
+
 def expanded_form(num):
 	"""takes an integer of n-digits and returns a string where each non-zero digit is followed by as many zeros as its position in the integer (modulo 10)"""
 		#The main challenges here is going to be that integers are not iterables
@@ -18,8 +20,10 @@ def expanded_form(num):
 			#Taking advice from here on keeping indices while looping: https://stackoverflow.com/questions/522563/accessing-the-index-in-python-for-loops
 			if not digit="0":
 				num_zeros= len(string_num)- idx
-				digit_expand= 
-
+				for _ in itertools.repeat(None, num_zeros):
+					digit+="0"
+    			expanded+= digit+" "
 			else:
 				continue
+		return expanded
 
