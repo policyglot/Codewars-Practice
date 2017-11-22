@@ -14,5 +14,12 @@ def expanded_form(num):
 		string_num= str(num)
 		expanded= ""
 		#We'll keep adding to the empty string as we process each digit
-		for digit in string_num:
-			
+		for idx, digit in enumerate(string_num, 1):
+			#Taking advice from here on keeping indices while looping: https://stackoverflow.com/questions/522563/accessing-the-index-in-python-for-loops
+			if not digit="0":
+				num_zeros= len(string_num)- idx
+				digit_expand= 
+
+			else:
+				continue
+
